@@ -1,7 +1,7 @@
 import React from 'react';
 import {FlatList} from 'react-native';
 
-import {useFragment, useLazyLoadQuery, useQuery} from 'relay-hooks';
+import {useLazyLoadQuery, useQuery} from 'relay-hooks';
 
 import TweetsQuery from '../../modules/relay/TweetsQuery';
 import {TweetsQuery as TweetsQueryType} from '../../modules/relay/__generated__/TweetsQuery.graphql';
@@ -10,11 +10,7 @@ import {Container, Button, PlusIcon} from './styles';
 import TweetsList from '../../components/TweetsList';
 
 const Home = () => {
-  // const {data, error, isLoading} = useQuery<TweetsQueryType>(TweetsQuery, {
-  //   page: 0,
-  //   pageSize: 999,
-  // });
-  const {} = useFragment(TweetsQuery, {
+  const {data, error, isLoading} = useQuery<TweetsQueryType>(TweetsQuery, {
     page: 0,
     pageSize: 999,
   });
