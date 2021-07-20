@@ -27,8 +27,10 @@
     "prettier"
   ],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": "off",
+    "react/no-unused-prop-types": "off",
     "react-hooks/rules-of-hooks": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "import/prefer-default-export": "off",
@@ -42,7 +44,9 @@
       }
     ],
     "no-use-before-define": "off",
-    "@typescript-eslint/ban-types": "off"
+    "@typescript-eslint/ban-types": "off",
+    "camelcase": "off",
+    "no-underscore-dangle": "off"
   },
   "settings": {
     "import/resolver": {
